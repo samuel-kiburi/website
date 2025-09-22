@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ ShopZone</h1>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-hero">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p>Discover amazing products at great prices</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="products-controls" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" oninput="applyFiltersAndSearch()" placeholder="Search products..." style="padding: 0.5rem; border: 2px solid #ddd; border-radius: 5px; width: 300px;">
+                    </div>
+                    <div class="filter-container">
+                        <select id="categoryFilter" onchange="applyFiltersAndSearch()" style="padding: 0.5rem; border: 2px solid #ddd; border-radius: 5px;">
+                            <option value="">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ ShopZone</h1>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-hero">
+            <div class="container">
+                <h2>Checkout</h2>
+                <p>Complete your purchase securely</p>
+            </div>
+        </section>
+
+        <section class="checkout-section">
+            <div class="container">
+                <div class="checkout-container">
+                    <div class="checkout-section">
+                        <h3>📋 Order Summary</h3>
+                        <div id="orderItems">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                        <div class="order-total">
+                            <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #ddd;">
+                                <span>Total Amount:</span>
+                                <span id="finalTotal">KSh 0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-section">
+                        <h3>🚚 Shipping Information</h3>
+                        <form id="shippingForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Delivery Address *</label>
+                                <textarea id="address" name="address" rows="3" required placeholder="Enter your full delivery address"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="checkout-section">
+                        <h3>💳 Payment Method</h3>
+                        <div class="payment-method">
+                            <h4>M-Pesa Payment</h4>
+                            <p>Pay securely using M-Pesa mobile money</p>
+
+                            <div class="mpesa-form">
+                                <form id="mpesaForm" onsubmit="return processMpesaPayment()">
+                                    <div class="form-group">
+                                        <label for="mpesaPhone">M-Pesa Phone Number *</label>
+                                        <input type="tel" id="mpesaPhone" name="mpesaPhone" required placeholder="0712345678" pattern="^0[17][0-9]{8}$">
+                                        <small style="color: #666;">Enter your M-Pesa registered phone number</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="amount">Amount to Pay *</label>
+                                        <input type="text" id="amount" name="amount" readonly style="background-color: #f8f9fa;">
+                                        <small style="color: #666;">Amount will be calculated from your cart</small>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="width: 100%;">Pay with M-Pesa</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions" style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <a href="cart.html" class="btn btn-secondary">Back to Cart</a>
+                        <button onclick="completeOrder()" class="btn btn-primary" style="flex: 1;">Complete Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
