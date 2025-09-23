@@ -1,39 +1,23 @@
 // Shopping Cart Data
-let cart = JSON.parse(localStorage.getItem('shopZoneCart')) || [];
+let cart = JSON.parse(localStorage.getItem('techtrendsZoneCart')) || [];
 let products = [
-    // Electronics (15 products)
-    { id: 1, name: "Studio Headphones", price: 3299, category: "electronics", image: 'akg.JPEG', description: "Immersive sound with active noise cancellation." },
-    { id: 2, name: "Smart Fitness Watch", price: 12999, category: "electronics", image: "https://picsum.photos/id/2/150/150", description: "Track your health and fitness goals with style." },
-    { id: 3, name: "Waterproof Party Speaker", price: 4999, category: "electronics", image: "https://picsum.photos/id/3/150/150", description: "Big sound for any occasion, with RGB lights." },
-    { id: 4, name: "OLED Smart TV", price: 69999, category: "electronics", image: "https://picsum.photos/id/4/150/150", description: "Stunning 65-inch OLED display with smart features." },
-    { id: 5, name: "Gaming Ultrabook", price: 79999, category: "electronics", image: "https://picsum.photos/id/5/150/150", description: "Lightweight and powerful for professionals on the go." },
-    { id: 6, name: "Wireless Mechanical Keyboard", price: 5599, category: "electronics", image: "https://picsum.photos/id/6/150/150", description: "Mechanical keyboard with customizable RGB lighting." },
-    { id: 7, name: "Vertical Ergonomic Mouse", price: 2499, category: "electronics", image: "https://picsum.photos/id/7/150/150", description: "Designed for comfort and precision." },
-    { id: 8, name: "Thunderbolt Docking Station", price: 2999, category: "electronics", image: "https://picsum.photos/id/8/150/150", description: "Expand your connectivity with this versatile adapter." },
-    { id: 9, name: "Solar Power Bank", price: 2999, category: "electronics", image: "https://picsum.photos/id/9/150/150", description: "Charge your devices anywhere, anytime with solar power." },
-    { id: 10, name: "4K Action Camera", price: 8999, category: "electronics", image: "https://picsum.photos/id/10/150/150", description: "Capture smooth, professional-quality videos of your adventures." },
-    { id: 11, name: "Racing Drone", price: 34999, category: "electronics", image: "https://picsum.photos/id/11/150/150", description: "Experience high-speed FPV drone racing." },
-    { id: 12, name: "Augmented Reality Glasses", price: 21999, category: "electronics", image: "https://picsum.photos/id/12/150/150", description: "Overlay digital information onto the real world." },
-    { id: 13, name: "Compact Mirrorless Camera", price: 45999, category: "electronics", image: "https://picsum.photos/id/13/150/150", description: "Unleash your creativity with this powerful compact camera." },
-    { id: 14, name: "Smart Reusable Notebook", price: 11999, category: "electronics", image: "https://picsum.photos/id/14/150/150", description: "Digitize your notes and reuse the pages." },
-    { id: 15, name: "Smart Doorbell", price: 7999, category: "electronics", image: "https://picsum.photos/id/15/150/150", description: "See and speak to visitors from anywhere." },
+ // Electronics (15 products)
+ { id: 1, name: "Studio Headphones", price: 3299, category: "electronics", image: 'akg.JPEG', description: "Immersive sound with active noise cancellation." },
+ { id: 2, name: "Smart Fitness Watch", price: 12999, category: "electronics", image: "aka.JPEG", description: "Track your health and fitness goals with style." },
+ { id: 3, name: "Waterproof Party Speaker", price: 4999, category: "electronics", image: "akb.JPEG", description: "Big sound for any occasion, with RGB lights." },
+ { id: 4, name: "OLED Smart TV", price: 69999, category: "electronics", image: "akc.JPEG", description: "Stunning 65-inch OLED display with smart features." },
+ { id: 5, name: "Gaming Ultrabook", price: 79999, category: "electronics", image: "akd.JPEG", description: "Lightweight and powerful for professionals on the go." },
+ { id: 6, name: "Wireless Mechanical Keyboard", price: 5599, category: "electronics", image: "ake.JPEG", description: "Mechanical keyboard with customizable RGB lighting." },
+ { id: 7, name: "Vertical Ergonomic Mouse", price: 2499, category: "electronics", image: "akf.JPEG", description: "Designed for comfort and precision." },
+ { id: 8, name: "Thunderbolt Docking Station", price: 2999, category: "electronics", image: "akh.JPEG", description: "Expand your connectivity with this versatile adapter." },
+ { id: 9, name: "Solar Power Bank", price: 2999, category: "electronics", image: "aki.JPEG", description: "Charge your devices anywhere, anytime with solar power." },
+ { id: 10, name: "4K Action Camera", price: 8999, category: "electronics", image: "akj.JPEG", description: "Capture smooth, professional-quality videos of your adventures." },
+ { id: 11, name: "Racing Drone", price: 34999, category: "electronics", image: "akk.JPEG", description: "Experience high-speed FPV drone racing." },
+ { id: 12, name: "Augmented Reality Glasses", price: 21999, category: "electronics", image: "akl.JPEG", description: "Overlay digital information onto the real world." },
+ { id: 13, name: "Compact Mirrorless Camera", price: 45999, category: "electronics", image: "akm.JPEG", description: "Unleash your creativity with this powerful compact camera." },
+ { id: 14, "name": "Smart Reusable Notebook", "price": 11999, "category": "electronics", "image": "akn.JPEG", "description": "Digitize your notes and reuse the pages." },
+ { id: 15, name: "Smart Doorbell", price: 7999, category: "electronics", image: "ako.JPEG", description: "See and speak to visitors from anywhere." },
 
-    // Fashion (15 products)
-    { id: 26, name: "Vintage Band T-Shirt", price: 1299, category: "fashion", image: "https://picsum.photos/id/26/150/150", description: "Express yourself with this unique graphic tee." },
-    { id: 27, name: "High-Top Canvas Sneakers", price: 5599, category: "fashion", image: "https://picsum.photos/id/27/150/150", description: "The perfect blend of comfort and street style." },
-    { id: 28, name: "Relaxed Fit Jeans", price: 3299, category: "fashion", image: "https://picsum.photos/id/28/150/150", description: "A modern take on a timeless classic." },
-    { id: 29, name: "Denim Trucker Jacket", price: 7999, category: "fashion", image: "https://picsum.photos/id/29/150/150", description: "Add an edge to your look with this biker jacket." },
-    { id: 30, name: "Linen Summer Dress", price: 3499, category: "fashion", image: "https://picsum.photos/id/30/150/150", description: "Effortlessly elegant for any occasion." },
-    { id: 31, name: "Oxford Button-Down Shirt", price: 2499, category: "fashion", image: "https://picsum.photos/id/31/150/150", description: "Stay cool and stylish in this breathable shirt." },
-    { id: 32, name: "Slim-Fit Chinos", price: 3199, category: "fashion", image: "https://picsum.photos/id/32/150/150", description: "Sharp and versatile for work or weekend." },
-    { id: 33, "name": "Merino Wool Scarf", "price": 1899, "category": "fashion", "image": "https://picsum.photos/id/33/150/150", "description": "Luxuriously soft and warm." },
-    { id: 34, "name": "Round Frame Sunglasses", "price": 2199, "category": "fashion", "image": "https://picsum.photos/id/34/150/150", "description": "Classic style with modern lens technology." },
-    { id: 35, "name": "Woven Fabric Belt", "price": 1499, "category": "fashion", "image": "https://picsum.photos/id/35/150/150", "description": "A casual and stylish belt for any outfit." },
-    { id: 36, "name": "Leather Hiking Boots", "price": 5999, "category": "fashion", "image": "https://picsum.photos/id/36/150/150", "description": "A timeless addition to any wardrobe." },
-    { id: 37, "name": "Zip-Up Hoodie", "price": 3499, "category": "fashion", "image": "https://picsum.photos/id/37/150/150", "description": "The ultimate in comfort and casual style." },
-    { id: 38, "name": "Long-Sleeve Polo", "price": 1999, "category": "fashion", "image": "https://picsum.photos/id/38/150/150", "description": "Moisture-wicking fabric to keep you cool." },
-    { id: 39, "name": "Leather Messenger Bag", "price": 2899, "category": "fashion", "image": "https://picsum.photos/id/39/150/150", "description": "Sleek and functional for your daily commute." },
-    { id: 40, "name": "Digital Sports Watch", "price": 8999, "category": "fashion", "image": "https://picsum.photos/id/40/150/150", "description": "Understated elegance for the modern individual." }
 ];
 
 // Initialize page
@@ -49,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         displayOrderSummary();
     }
     if (window.location.pathname.includes('home.html')) {
+        // On the home page, if a user is logged in, they should be able to log out.
+        // For this demo, we'll just clear the login status on visiting home.
+        // In a real app, you'd have a dedicated logout button.
+        if (localStorage.getItem('isLoggedIn')) {
+            // localStorage.removeItem('isLoggedIn'); 
+        }
         displayFeaturedProducts();
     }
 });
@@ -136,7 +126,7 @@ function addToCart(productId) {
 
 // Save cart to localStorage
 function saveCart() {
-    localStorage.setItem('shopZoneCart', JSON.stringify(cart));
+    localStorage.setItem('techtrendsZoneCart', JSON.stringify(cart));
 }
 
 // Display cart items
@@ -164,6 +154,7 @@ function displayCart() {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
+            <div class="cart-item-image"><img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover;"></div>
             <div class="cart-item-info">
                 <div class="cart-item-title">${item.name}</div>
                 <div class="cart-item-price">KSh ${item.price.toLocaleString()}</div>
@@ -223,6 +214,13 @@ function displayOrderSummary() {
 
     if (!orderItems || !finalTotal || !amountInput) return;
 
+    // Check if user is logged in before displaying checkout
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+        alert('You must be logged in to proceed to checkout.');
+        window.location.href = 'login.html';
+        return;
+    }
+
     if (cart.length === 0) {
         window.location.href = 'cart.html';
         return;
@@ -239,6 +237,7 @@ function displayOrderSummary() {
         orderItem.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin: 0.5rem 0;';
         orderItem.innerHTML = `
             <span style="display: flex; align-items: center;">
+                <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px; border-radius: 4px;">
                 ${item.name} (x${item.quantity})</span>
             <span>KSh ${itemTotal.toLocaleString()}</span>
         `;
@@ -359,6 +358,9 @@ function validateLogin() {
 
     // Simple validation for demo
     if (email && password) {
+        // Set a flag in localStorage to indicate the user is logged in
+        localStorage.setItem('isLoggedIn', 'true');
+
         alert('Login successful! Redirecting to products...');
         window.location.href = 'products.html';
         return false;
@@ -390,7 +392,7 @@ function completeOrder() {
     const mpesaForm = document.getElementById('mpesaForm');
 
     if (shippingForm.checkValidity() && mpesaForm.checkValidity()) {
-        alert('Order completed successfully!\n\nThank you for shopping with ShopZone.\nYour order will be processed and you will receive a confirmation message.');
+        alert('Order completed successfully!\n\nThank you for shopping with TECHTRENDS ZONE.\nYour order will be processed and you will receive a confirmation message.');
         // Clear cart after successful order
         cart = [];
         saveCart();

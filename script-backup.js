@@ -1,5 +1,5 @@
 // Shopping Cart Data
-let cart = JSON.parse(localStorage.getItem('shopZoneCart')) || [];
+let cart = JSON.parse(localStorage.getItem('techtrendsZoneCart')) || [];
 let products = [
     {
         id: 1,
@@ -139,7 +139,7 @@ function addToCart(productId) {
 
 // Save cart to localStorage
 function saveCart() {
-    localStorage.setItem('shopZoneCart', JSON.stringify(cart));
+    localStorage.setItem('techtrendsZoneCart', JSON.stringify(cart));
 }
 
 // Display cart items
@@ -376,7 +376,7 @@ function completeOrder() {
     const mpesaForm = document.getElementById('mpesaForm');
 
     if (shippingForm.checkValidity() && mpesaForm.checkValidity()) {
-        alert('Order completed successfully!\n\nThank you for shopping with ShopZone.\nYour order will be processed and you will receive a confirmation message.');
+        alert('Order completed successfully!\n\nThank you for shopping with TECHTRENDS ZONE.\nYour order will be processed and you will receive a confirmation message.');
         // Clear cart after successful order
         cart = [];
         saveCart();
