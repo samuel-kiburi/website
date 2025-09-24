@@ -2,7 +2,7 @@
 let cart = JSON.parse(localStorage.getItem('techtrendsZoneCart')) || [];
 let products = [
  // Electronics (15 products)
- { id: 1, name: "Studio Headphones", price: 3299, category: "electronics", image: 'akg.JPEG', description: "Immersive sound with active noise cancellation." },
+ { id: 1, name: "Headphones", price: 3299, category: "electronics", image: 'akg.JPEG', description: "Immersive sound with active noise cancellation." },
  { id: 2, name: "Smart Fitness Watch", price: 12999, category: "electronics", image: "aka.JPEG", description: "Track your health and fitness goals with style." },
  { id: 3, name: "Waterproof Party Speaker", price: 4999, category: "electronics", image: "akb.JPEG", description: "Big sound for any occasion, with RGB lights." },
  { id: 4, name: "OLED Smart TV", price: 69999, category: "electronics", image: "akc.JPEG", description: "Stunning 65-inch OLED display with smart features." },
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('checkout.html')) {
         displayOrderSummary();
     }
-    if (window.location.pathname.includes('home.html')) {
+    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
         // On the home page, if a user is logged in, they should be able to log out.
         // For this demo, we'll just clear the login status on visiting home.
         // In a real app, you'd have a dedicated logout button.
