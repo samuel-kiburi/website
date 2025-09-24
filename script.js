@@ -2,21 +2,21 @@
 let cart = JSON.parse(localStorage.getItem('techtrendsZoneCart')) || [];
 let products = [
  // Electronics (15 products)
- { id: 1, name: "Headphones", price: 3299, category: "electronics", image: 'akg.JPEG', description: "Immersive sound with active noise cancellation." },
- { id: 2, name: "Smart Fitness Watch", price: 12999, category: "electronics", image: "aka.JPEG", description: "Track your health and fitness goals with style." },
- { id: 3, name: "Waterproof Party Speaker", price: 4999, category: "electronics", image: "akb.JPEG", description: "Big sound for any occasion, with RGB lights." },
- { id: 4, name: "OLED Smart TV", price: 69999, category: "electronics", image: "akc.JPEG", description: "Stunning 65-inch OLED display with smart features." },
- { id: 5, name: "Gaming Ultrabook", price: 79999, category: "electronics", image: "akd.JPEG", description: "Lightweight and powerful for professionals on the go." },
- { id: 6, name: "Wireless Mechanical Keyboard", price: 5599, category: "electronics", image: "ake.JPEG", description: "Mechanical keyboard with customizable RGB lighting." },
- { id: 7, name: "Vertical Ergonomic Mouse", price: 2499, category: "electronics", image: "akf.JPEG", description: "Designed for comfort and precision." },
- { id: 8, name: "Thunderbolt Docking Station", price: 2999, category: "electronics", image: "akh.JPEG", description: "Expand your connectivity with this versatile adapter." },
- { id: 9, name: "Solar Power Bank", price: 2999, category: "electronics", image: "aki.JPEG", description: "Charge your devices anywhere, anytime with solar power." },
- { id: 10, name: "4K Action Camera", price: 8999, category: "electronics", image: "akj.JPEG", description: "Capture smooth, professional-quality videos of your adventures." },
- { id: 11, name: "Racing Drone", price: 34999, category: "electronics", image: "akk.JPEG", description: "Experience high-speed FPV drone racing." },
- { id: 12, name: "Augmented Reality Glasses", price: 21999, category: "electronics", image: "akl.JPEG", description: "Overlay digital information onto the real world." },
- { id: 13, name: "Compact Mirrorless Camera", price: 45999, category: "electronics", image: "akm.JPEG", description: "Unleash your creativity with this powerful compact camera." },
- { id: 14, "name": "Smart Reusable Notebook", "price": 11999, "category": "electronics", "image": "akn.JPEG", "description": "Digitize your notes and reuse the pages." },
- { id: 15, name: "Smart Doorbell", price: 7999, category: "electronics", image: "ako.JPEG", description: "See and speak to visitors from anywhere." },
+ { id: 1, name: "Headphones", price: 3299, category: "electronics", image: 'https://source.unsplash.com/300x200/?headphones', description: "Immersive sound with active noise cancellation." },
+ { id: 2, name: "Smart Fitness Watch", price: 12999, category: "electronics", image: "https://source.unsplash.com/300x200/?smart,watch", description: "Track your health and fitness goals with style." },
+ { id: 3, name: "Waterproof Party Speaker", price: 4999, category: "electronics", image: "https://source.unsplash.com/300x200/?bluetooth,speaker", description: "Big sound for any occasion, with RGB lights." },
+ { id: 4, name: "OLED Smart TV", price: 69999, category: "electronics", image: "https://source.unsplash.com/300x200/?smart,tv", description: "Stunning 65-inch OLED display with smart features." },
+ { id: 5, name: "Gaming Ultrabook", price: 79999, category: "electronics", image: "https://source.unsplash.com/300x200/?gaming,laptop", description: "Lightweight and powerful for professionals on the go." },
+ { id: 6, name: "Wireless Mechanical Keyboard", price: 5599, category: "electronics", image: "https://source.unsplash.com/300x200/?mechanical,keyboard", description: "Mechanical keyboard with customizable RGB lighting." },
+ { id: 7, name: "Vertical Ergonomic Mouse", price: 2499, category: "electronics", image: "https://source.unsplash.com/300x200/?ergonomic,mouse", description: "Designed for comfort and precision." },
+ { id: 8, name: "Thunderbolt Docking Station", price: 2999, category: "electronics", image: "https://source.unsplash.com/300x200/?docking,station", description: "Expand your connectivity with this versatile adapter." },
+ { id: 9, name: "Solar Power Bank", price: 2999, category: "electronics", image: "https://source.unsplash.com/300x200/?solar,power,bank", description: "Charge your devices anywhere, anytime with solar power." },
+ { id: 10, name: "4K Action Camera", price: 8999, category: "electronics", image: "https://source.unsplash.com/300x200/?action,camera", description: "Capture smooth, professional-quality videos of your adventures." },
+ { id: 11, name: "Racing Drone", price: 34999, category: "electronics", image: "https://source.unsplash.com/300x200/?racing,drone", description: "Experience high-speed FPV drone racing." },
+ { id: 12, name: "Augmented Reality Glasses", price: 21999, category: "electronics", image: "https://source.unsplash.com/300x200/?ar,glasses", description: "Overlay digital information onto the real world." },
+ { id: 13, name: "Compact Mirrorless Camera", price: 45999, category: "electronics", image: "https://source.unsplash.com/300x200/?mirrorless,camera", description: "Unleash your creativity with this powerful compact camera." },
+ { id: 14, "name": "Smart Reusable Notebook", "price": 11999, "category": "electronics", "image": "https://source.unsplash.com/300x200/?smart,notebook", "description": "Digitize your notes and reuse the pages." },
+ { id: 15, name: "Smart Doorbell", price: 7999, category: "electronics", image: "https://source.unsplash.com/300x200/?smart,doorbell", description: "See and speak to visitors from anywhere." },
 
 ];
 
